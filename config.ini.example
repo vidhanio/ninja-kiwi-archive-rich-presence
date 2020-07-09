@@ -1,0 +1,21 @@
+[Rich Presence]
+
+client_id=730602328645697616
+
+[In Game]
+
+large_image={game_image}
+large_text={game_hf}
+small_image=
+small_text=
+details=Playing {game_hf}
+state=In Game
+
+[In Menu]
+
+large_image={icon}
+large_text=Ninja Kiwi Archive
+small_image=
+small_text=
+details=
+state=In Menu
