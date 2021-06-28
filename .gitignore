@@ -132,3 +132,5 @@ dmypy.json
 assets/original/
 config.ini
 testing/
+linker/LinkWithKiwiOpen.xml
+linker/ninjakiwilocation.dat

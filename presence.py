@@ -1,7 +1,7 @@
 from pypresence import Presence
 import json, pprint, configparser, time, psutil, sys
 import pygetwindow as gw
-
+import os
 
 class rich_presence:
     def __init__(self):
@@ -34,6 +34,8 @@ class rich_presence:
             elif sys.platform.startswith("win32"):
                 print("Ninja Kiwi Archive is not running")
                 self.RPC.clear()
+                if close_on_close:
+                    exit()
             else:
                 pvars = self.presence_gen(self.format_gen)
                 # print("-------------------------\npresence_dict\n-------------------------")
@@ -88,5 +90,7 @@ class rich_presence:
                 self.presence_dict[field] = None
         return self.presence_dict
 
+os.chdir(sys.path[0])
+close_on_close = len(sys.argv) > 1 and sys.argv[1] == "bkgrnd"
 
 rich_presence()
